@@ -1,0 +1,36 @@
+<div class="page-content page-background">
+    {{> userInfoCard}}
+
+    {{#if isNull}}
+        {{> nullCard}}
+    {{else}}
+        {{#each data}}
+            <div class="list-block" style="margin: 12px 4px;" >
+                <div class="wx-group">
+                    {{#if groupTitle}}
+                        <div class="wx-title group-split-block border-color">{{groupTitle}}</div>
+                    {{/if}}
+                    <ul class="wx-settings editable-group">
+                    {{#each groupData}}
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title"><span>{{title}}</span></div>
+                                    <span class="ess-item-value">{{value}}</span>
+                                </div>
+                            </div>
+                        </li>
+                     {{/each}}
+                     {{#compare permission_code '===' 3}}
+                        <li>
+                            <div class="item-inner font-color-with-imp edit-container" style="padding-right:0px" index={{@index}} data_id="{{groupId}}" delete_able="false">
+                                <i class="WeStar_iconfont edit-group">&#xe624;</i>
+                            </div>
+                        </li>
+                        {{/compare}}
+                    </ul>
+                </div>
+            </div>
+        {{/each}}
+    {{/if}}
+</div>

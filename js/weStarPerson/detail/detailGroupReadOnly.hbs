@@ -1,0 +1,30 @@
+<div class="page-content page-background">
+    {{> userInfoCard}}
+
+    {{#if isNull}}
+        {{> nullCard}}
+    {{else}}
+        {{#each data}}
+            <div class="list-block" style="margin: 5px 0;">
+                <div class="wx-group">
+                    {{#if groupTitle}}
+                        <div class="wx-title group-split-block border-color">{{groupTitle}}</div>
+                    {{/if}}
+                    <ul class="wx-settings">
+                     {{#each groupData}}
+                        <li>
+                            <div class="item-content" name="{{title}}">
+                                <div class="item-inner">
+                                    <div class="item-title"><span>{{title}}</span></div>
+                                    <span class="ess-item-value">{{value}}</span>
+                                </div>
+                            </div>
+                        </li>
+                     {{/each}}
+                    </ul>
+                </div>
+            </div>
+        {{/each}}
+    {{/if}}
+</div>
+

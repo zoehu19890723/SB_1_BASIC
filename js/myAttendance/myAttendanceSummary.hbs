@@ -1,0 +1,38 @@
+{{#if isNull}}
+    {{> nullCard}}
+{{else}}
+    <div class="summary-panel">
+        <div class="month-date-container back-color-not-imp">
+            <input type="text" readonly id="month" class="weui-input" style="width:100%" value="" sourceValue=""/>
+            <div class="arrow-down month-select"><i class="WeStar_iconfont">&#xe613;</i></div>
+        </div>
+        <div class="summary-detail-container">
+            <div class="summary-detail border-color">
+                <div class="title">{{i18n-text 'late-arrive'}}</div>
+                <div class="value">{{summaryData.lateDays}}{{i18n-text 'day'}}</div>
+            </div>
+            <div class="summary-detail border-color">
+                <div class="title">{{i18n-text 'early-leave'}}</div>
+                <div class="value">{{summaryData.earlyDays}}{{i18n-text 'day'}}</div>
+            </div>
+            <div class="summary-detail border-color">
+                <div class="title">{{i18n-text 'absence'}}</div>
+                <div class="value">{{summaryData.absenceDays}}{{i18n-text 'day'}}</div>
+            </div>
+        </div>
+    </div>
+    {{#if summaryData.hasAbnormal}}
+        <div class="abnormal-record-detail">
+            <div class="abnormal-des border-color">{{i18n-text 'abnormal-detail'}}</div>
+            <div class="record-detail-panel">
+                {{#each summaryData.abnormalRecord}}
+                    <div class="detail-item">
+                        <span>{{signin_date}}</span>
+                        <span>{{status}}</span>
+                        <span>{{time}}</span>
+                    </div>
+                {{/each}}
+            </div>
+        </div>
+    {{/if}}
+{{/if}}

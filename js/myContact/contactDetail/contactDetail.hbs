@@ -1,0 +1,149 @@
+<div class="page-content page-background {{animation}}">
+{{#if isNull}}
+    {{> nullCard}}
+{{else}}
+    <div class="contact-header" style="margin-top:8px">
+        <div class="wx-group">
+            <ul class="wx-person">
+                <li class="wx-item">
+                    <div class="wx-icon cut-img" id="wx_icon">
+                        <img src="{{photo}}" onload="AutoResizeImage(60,this)" onerror="javascript:this.src='./img/default.jpg';"> 
+                    </div>
+                    <div class="wx-name">
+                        {{name}} 
+                        {{#compare gender '===' 0}} 
+                            <i class="icon WeStar_iconfont" style="font-size:12px">&#xe623;</i> 
+                        {{else}} 
+                            <i class="icon WeStar_iconfont" style="font-size:12px">&#xe625;</i>
+                        {{/compare}}
+                    </div> 
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="list-block" style="margin-top:16px">
+        <div class="list-group">
+            <ul>
+                {{#if mobile}}
+                <li>
+                    <a href="tel:{{mobile}}" class="item-link item-content external">
+                        <div class="item-media">
+                            <i class="icon WeStar_iconfont">&#xe604;</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">{{mobile}}</div>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="sms:{{mobile}}" class="item-link item-content external">
+                        <div class="item-media">
+                            <i class="icon WeStar_iconfont">&#xe61c;</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">{{mobile}}</div>
+                        </div>
+                    </a>
+                </li>
+                {{/if}}
+                {{#if email}}
+                <li>
+                    <a href="mailto:{{email}}" class="item-link item-content external">
+                        <div class="item-media">
+                            <i class="icon WeStar_iconfont">&#xe608;</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">{{email}}</div>
+                        </div>
+                    </a>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+
+        <div class="list-group" style="margin-top:16px">
+            {{#if organization}}
+                <ul> 
+                    <li>
+                        <a class=" item-content">
+                            <div class="item-media">
+                                <i class="icon WeStar_iconfont">&#xe602;</i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title" style="color:rgb(125,125,125)">{{organization}}</div>
+                            </div>
+                        </a>
+                    </li>
+                    {{#if post}}
+                    <li>
+                        <a class=" item-content">
+                            <div class="item-media">
+                                <i class="icon WeStar_iconfont">&#xe616;</i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title" style="color:rgb(125,125,125)">{{post}}</div>
+                            </div>
+                        </a>
+                    </li>
+                    {{/if}}
+                    {{#if supervisor}}
+                    <li>
+                        <a  class=" item-content item-link supervisor-item" data-id="{{supervisor.id}}">
+                            <div class="item-media">
+                                <i class="icon WeStar_iconfont">&#xe620;</i>
+                            </div>
+                            <div class="item-inner">
+                                <div class="item-title" style="color:rgb(125,125,125)">{{i18n-text 'leader'}}</div>
+                                <div class="item-after">{{supervisor.name}}</div>
+                            </div>
+                        </a>
+                    </li>
+                    {{/if}}
+                    {{#compare subordinate_no '>' 0}}
+                        <li>
+                            <a  class="item-content item-link subordinate-item">
+                                <div class="item-media">
+                                    <i class="icon WeStar_iconfont">&#xe620;</i>
+                                </div>
+                                <div class="item-inner">
+                                    <div class="item-title" style="color:rgb(125,125,125)">{{i18n-text 'subordinate'}}</div>
+                                    <div class="item-after">{{subordinate_no}}</div>
+                                </div>
+                            </a>
+                        </li>
+                    {{/compare}}
+                </ul>
+            {{/if}}
+        </div>
+        <div class="list-group" style="margin-top:16px">
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media">
+                            <i class="icon WeStar_iconfont">&#xe627;</i>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title">{{i18n-text 'collection'}}</div>
+                            <div class="item-after" id="myContact_contactDetail_checkbox">
+                                <label class="label-switch" id="myContact_contactDetail_label"> 
+                                    <input id="isFavorite" type="checkbox" {{#compare isFavor '===' 1}} checked="on" {{/compare}}/>
+                                    <div class="checkbox"></div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+{{/if}}
+
+{{#if origin}}
+<div class="back-previous back-color-imp" data-id={{origin.id}} data-name={{origin.name}}>
+    <span>
+        <i class="icon WeStar_iconfont back-icon-spec" style="color:white!important">&#xe632;</i>
+    </span>
+    <span>{{origin.name}}</span>
+</div>
+{{/if}}
+

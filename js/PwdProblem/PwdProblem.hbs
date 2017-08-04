@@ -1,0 +1,68 @@
+<div class="page-content page-background">
+    <div class="content-block login-box" style="margin: 0;padding: 0">
+        <div class="list-block"  >
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <div class="weui_cell_bd weui_cell_primary">
+                                    <input class="weui_input" name="mobile" id="mobile" type="text" placeholder="{{i18n-text 'phoneTip'}}">
+                                </div>
+                                <div class="weui_cell_ft"> <span title="{{i18n-text 'clear'}}" class="WeStar_iconfont" id="text-clear-mo" style="display:none" >&#xe60c;&nbsp</span></div>
+                                <div class="weui_cell_ft">
+                                    <button id="check-phone-number" class="cell-right-block back-color-imp">{{i18n-text 'sendCode'}}</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input  class="weui_input" type="text" id="verifyCode" placeholder="{{i18n-text 'enterCode'}}">
+                            </div>
+                            <div class="weui_cell_ft"> <span title="清空" class="WeStar_iconfont" id="text-clear-ve" style="display:none" >&#xe60c;&nbsp</span></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+             <h2 style="margin:20px 20px 5px 15px;font-size:14px" class="font-color-with-imp">{{i18n-text 'pwdRule'}}</h2>
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input class="weui_input" id="password" type="password" placeholder="{{i18n-text 'newPwd'}}">
+                            </div>
+                            <div class="weui_cell_ft"> <span title="{{i18n-text 'clear'}}" class="WeStar_iconfont" id="text-clear-password" style="display:none" >&#xe60c;&nbsp</span></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <div class="item-content">
+                        <div class="item-media"></div>
+                        <div class="item-inner">
+                            <div class="item-input">
+                                <input class="weui_input" id="password_confirm" type="password" placeholder="{{i18n-text 'newPwdSure'}}">
+                            </div>
+                            <div class="weui_cell_ft"> <span title="{{i18n-text 'clear'}}" class="WeStar_iconfont" id="text-clear-password_confirm" style="display:none" >&#xe60c;&nbsp</span></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+        </div>
+       <div class="wx-form">
+            <a href="#" id="enterOK" class="weui_btn btn-quit-color" style="margin: 0;text-align: center;line-height:48px">{{i18n-text 'sure'}}</a>
+       </div>
+    </div>
+</div>

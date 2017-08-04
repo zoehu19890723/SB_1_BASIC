@@ -1,0 +1,38 @@
+<div class="page-content page-background">
+	{{#if isNull}}
+		{{> nullCard}}
+	{{else}}
+	    <div class="content-block  tab-myleave">
+		    <div class="buttons-row ">
+		      <a href="#tab1" class="tab-link active button"><i class="WeStar_iconfont">&#xe626;</i>{{i18n-text 'approval-pending'}}</a>
+		      <a href="#tab2" class="tab-link button"><i class="WeStar_iconfont">&#xe601;</i>{{i18n-text 'approval-end'}}</a>
+		    </div>
+		</div>
+		<div class="tabs-animated-wrap tab-content">
+	        <div class="tabs">
+		        <div id="tab1" class="tab tab-overflow-auto active">
+		        	<div class="content-block">
+			        	{{#compare data.notApproved.length '===' 0}}
+			        		{{> nullCard}}
+			        	{{else}}
+				        	{{#each data.notApproved}}
+				        		{{>applyInfoCard}}
+				        	{{/each}}
+			        	{{/compare}}
+			        </div>
+		        </div>
+		        <div id="tab2" class="tab tab-overflow-auto">
+		        	<div class="content-block">
+			        	{{#compare data.approved.length '===' 0}}
+			        		{{> nullCard}}
+			        	{{else}}
+			        		{{#each data.approved}}
+				        		{{>applyInfoCard}}
+				        	{{/each}}
+				        {{/compare}}
+				    </div>
+		        </div>
+	        </div>
+	    </div>
+    {{/if}}
+</div>

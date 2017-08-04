@@ -1,0 +1,64 @@
+<div class="toolbar tabbar tabbar-labels">
+    <div class="toolbar-inner">
+        <a href="#" class="tab-link" toPage="myProfile">
+            <i class="WeStar_iconfont bigger-icon">&#xe607</i>
+            <span class="tabbar-label">{{i18n-text 'home'}}</span>
+        </a>
+        {{!-- <a href="#" class="tab-link" toPage="myMessage">
+            <i class="WeStar_iconfont bigger-icon">&#xe609</i>
+            <span class="tabbar-label">{{i18n-text 'news'}}</span>
+        </a> --}}
+        <a href="#" class="tab-link" toPage="myContact">
+            <i class="WeStar_iconfont bigger-icon">&#xe617</i>
+            <span class="tabbar-label">{{i18n-text 'contact'}}</span>
+        </a>
+        <a href="#" class="tab-link active" toPage="mySelf">
+            <i class="WeStar_iconfont bigger-icon">&#xe61b</i>
+            <span class="tabbar-label">{{i18n-text 'myself'}}</span>
+        </a>
+    </div>
+</div>
+<div class="page-content page-background">
+        {{> userInfoCard}}
+        <div class="mobileframe" style="margin-top:0px">
+            <div class="wx-group">
+                <div class="wx-title"></div>
+                <ul class="wx-settings">
+                    <li class="wx-item" toPage="setting">
+                        <span class="wx-content">
+                            <i class="WeStar_iconfont ">&#xe624;</i>
+                        </span>
+                        <div class="wx-name"><i class="WeStar_iconfont bigger-icon">&#xe606</i><span>{{i18n-text 'setting'}}</span></div>
+                    </li>
+                    {{!-- <li class="wx-item" toPage="feedback">
+                        <span class="wx-content">
+                            <i class="WeStar_iconfont ">&#xe624;</i>
+                        </span>
+                        <div class="wx-name"><i class="WeStar_iconfont bigger-icon pink">&#xe61e</i><span>{{i18n-text 'my-feedback'}}</span></div>
+                    </li> --}}
+                </ul>
+            </div>
+            {{!-- <div class="wx-group">
+                <div class="wx-title"></div>
+                <ul class="wx-settings">
+                    <li class="wx-item" topage="online">
+                        <span class="wx-content">
+                            <i class="WeStar_iconfont ">&#xe624;</i>
+                        </span>
+                        <div class="wx-name">
+                            <i class="WeStar_iconfont bigger-icon blue">&#xe622</i>
+                            <span>{{i18n-text 'servicePhone'}}</span>
+                        </div>
+                    </li>
+                    <li class="wx-item" id="recommendF">
+                        <span class="wx-content">
+                            <i class="WeStar_iconfont ">&#xe624;</i>
+                        </span>
+                        <div class="wx-name"><i class="WeStar_iconfont bigger-icon green">&#xe605</i><span>{{i18n-text 'recommendF'}}</span></div>
+                    </li> 
+                </ul>
+            </div> --}}
+            <a href="javascript:void(0);" class="weui_btn weui_btn_warn quitSystem btn-quit-color" style="margin: 20px; color: white">{{i18n-text 'quitSys'}}</a>
+        </div>
+    </div>
+

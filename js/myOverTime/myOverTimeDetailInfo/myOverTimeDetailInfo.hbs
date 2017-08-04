@@ -1,0 +1,103 @@
+<div class="page-content page-background">
+	{{#if isNull}}
+		{{> nullCard}}
+	{{else}}
+	    <div class="basic-info-card">
+	    	<div class="user-info">
+	    		<div class="user-image cut-img">
+	    			<img src="{{data.applyPerson.image}}" onerror="javascript:this.src='./img/default.jpg';" onload="AutoResizeImage(60,this)">
+	    		</div>
+	    		<div class="user-describtion">
+	    			<div style = "font-size:14px;color: black;font-weight: bold;">{{data.applyPerson.name}}</div>
+	    			<div>{{data.finalStatus.display}}</div>
+	    		</div>
+	    	</div>
+	    	<div class="apply-descrition">
+	    		{{#each data.leaveGeneral}}
+	    			<div class="apply-item">
+	    				<span style="margin-right:8px">{{title}} :</span>
+	    				<span class="value">{{value}}</span>
+	    			</div>
+	    		{{/each}}
+	    	</div>
+	    	<div class="final-status-image">
+	    		{{#compare data.finalStatus.code '===' '2'}}
+	    			<i class="WeStar_iconfont status-2">&#xe60d;</i>
+	    			{{else}}
+	    				{{#compare data.finalStatus.code '===' '3'}}
+	    					<i class="WeStar_iconfont status-3">&#xe60e;</i>
+	    				{{/compare}}
+	    		{{/compare}}
+	    	</div>
+    	</div>
+	    <div class="approve-flow-card">
+	    	{{#each data.approvePerson}}
+		    	<div class="one-item">
+		    		<div class = "status-img step-no">
+		    			{{step_no}}
+					</div>
+		        	<div class="b_main">
+						<div class="border">
+							{{#each data}}
+								<div class="user-info-time">
+									<span>{{updateTime}}</span>
+								</div>
+								<div class="user-info">
+						    		<div class="user-image cut-img">
+						    			<img src="{{image}}" onerror="javascript:this.src='./img/default.jpg';" onload="AutoResizeImage(40,this)">
+						    		</div>
+						    		<div class="user-describtion">
+						    			<div class="name">{{name}}</div>
+						    			<div class="status-{{status.step_status}}">{{status.display}}</div>
+						    			<div>{{status.msg}}</div>
+						    		</div>
+						    	</div>
+					    	{{/each}}
+						</div> 
+						<div class="out"> 
+							<div class="in"></div>
+						</div>
+					</div>
+		    	</div>
+	    	{{/each}}
+	    	<hr class="flow-line" width= "1">	
+    	</div>
+    {{/if}}
+    {{#compare code '===' 0}}
+    <div class="item-content detail-edit-content">
+      	<div class="item-inner">
+        	<div class="item-input">
+        		<div class="item-title label detail-reson-label">{{i18n-text 'cancel-reason'}}</div>
+          		<textarea id="leave-reson" class="resizable weui_input detail-reson-text" placeholder="{{i18n-text 'input-more'}}"></textarea>
+        	</div>
+      	</div>
+    </div>
+    {{/compare}}
+    {{#compare code '===' 2}}
+    <div class="item-content detail-edit-content">
+      	<div class="item-inner">
+        	<div class="item-input">
+        		<div class="item-title label detail-reson-label">{{i18n-text 'approval-remark'}}</div>
+          		<textarea id="leave-reson"  class="resizable weui_input detail-reson-text" placeholder="{{i18n-text 'input-more'}}"></textarea>
+        	</div>
+      	</div>
+    </div>
+    {{/compare}}
+</div>
+{{#compare code '===' 0}}
+	<div class="toolbar">
+		<div class="toolbar-inner" style="justify-content: center;">
+			<a href="#" class="cancel-link-actions">{{i18n-text 'cancel-apply'}}</a>
+		</div>
+	</div>
+{{/compare}}
+
+{{#compare code '===' 2}}
+	<div class="toolbar">
+		<div class="toolbar-inner">
+			<a href="#" class="approve-link-actions status-3" code="1"><i class="WeStar_iconfont action-button-icon">&#xe603;</i>{{i18n-text 'refuse-apply'}}</a>
+			<a href="#" class="approve-link-actions" code="0"><i class="WeStar_iconfont action-button-icon">&#xe600;</i>{{i18n-text 'approve-apply'}}</a>
+		</div>
+	</div>
+{{/compare}}
+

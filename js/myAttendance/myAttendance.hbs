@@ -1,0 +1,73 @@
+<div class="page-content page-background">
+    <div class="tabs">
+        <div id="tab1" class="tab active">
+            <div class="title-bar">
+                <div class="select-bar">
+                    <div class="address-info">
+                        <i class="WeStar_iconfont myCompany font-color-with-imp">&#xe60f;</i>
+                        <div class="detail-address-info">
+                            <div class="company">
+                                <div class="company-name">{{currentCompany}}</div>
+                                <div class="arrow-down"><i class="WeStar_iconfont">&#xe610;</i></div>
+                            </div>
+                            <div class="address">{{currentAddress}}</div>
+                        </div>
+                    </div>
+                    <div class="date-info border-color back-color-with-1">
+                        <input type="text" readonly id="date" style="width: 65px;" class="weui-input" value="" sourceValue=""/>
+                        <div class="arrow-down"><i class="WeStar_iconfont">&#xe610;</i></div> 
+                    </div>
+                </div>
+                {{#if statusObj}}
+                    <div class="status-bar status-{{statusObj.statusCode}}">
+                        {{i18n-text 'attendance-status'}} {{statusObj.statusText}}
+                    </div>
+                {{/if}}
+            </div>
+            <div class="record-panel">
+            	<hr class="flow-line" width= "3">
+            	{{#each record}}
+            		<div class="record">
+            			<div class="record-circle status-{{hasLocation}}"></div>
+            			<div class="record-content">
+        	    			<div class="record-time">{{sign_time}}</div>
+        	    			<div class="record-location">
+        	    				{{#if hasLocation}}
+        	    				<i class="WeStar_iconfont">&#xe60a;</i>
+        	    				<span>{{sign_address}}</span>
+        	    				{{/if}}
+        	    			</div>
+        	    		</div>
+            		</div>
+            	{{/each}}
+                {{#if showAttendanceBtn}}
+                	<div class="attendence-action-panel disable">
+                		<div class="attendence-action back-color-not-imp">
+                			<div class="action-text">{{text}}</div>
+                			<div class="action-time-interval">{{time}}</div>
+                            <div class="action-attending">{{i18n-text 'punching'}}</div>
+                            <div class="attendance-back linear-back"></div>
+                		</div>
+                		<a href="#" data-popup=".popup-about" class="open-popup attend-location-des font-color-with-6">
+                			<i class="WeStar_iconfont">&#xe60b;</i>
+            				<span></span>
+            			</a>
+                	</div>
+                {{/if}}
+            </div>
+        </div>
+        <div id="tab2" class="tab" style="overflow: hidden;"></div>
+    </div>
+    <div class="toolbar tabbar" style="height:53px">
+        <div class="toolbar-inner">
+            <a href="#tab1" class="tab-link active">
+                <i class="WeStar_iconfont" style="font-size : 24px">&#xe611;</i>
+                <span class="tabbar-label" style="font-size : 10px">{{i18n-text 'attendance'}}</span>
+            </a>
+            <a href="#tab2" class="tab-link">
+                <i class="WeStar_iconfont" style="font-size : 24px">&#xe612;</i>
+                  <span class="tabbar-label" style="font-size : 10px">{{i18n-text 'result-statistics'}}</span>
+            </a>
+        </div>
+    </div>
+</div>

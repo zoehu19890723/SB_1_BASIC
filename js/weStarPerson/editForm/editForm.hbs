@@ -1,0 +1,52 @@
+<div class="page-content page-background">
+	<div class="mobileframe">
+        <div class="wx-group">
+            <ul class="wx-settings">
+                {{#each form}}
+                <li class="wx-item">
+                    <span class="wx-content">
+                        {{#compare type.input "===" "selector"}}
+                            <input type="text" placeholder="{{placeholder}}" id="{{field_code}}" class="weui-input" value="" sourceValue="" readonly index="{{@index}}" nullable="{{nullable}}" selector="true"/>
+                                <i class="WeStar_iconfont right-arrow">&#xe624;</i>
+                        {{else}}
+                            {{#compare type.input "===" "text"}}
+                                <input type="text" placeholder="{{placeholder}}" id="{{field_code}}" value="{{value}}" class="weui-input" index="{{@index}}" nullable="{{nullable}}"/>
+                            {{else}}
+                                {{#compare type.input "===" "dateTimeSeletor"}}
+                                <input type="text" placeholder="{{placeholder}}" id="{{field_code}}" class="weui-input" value="" sourceValue="" readonly index="{{@index}}" nullable="{{nullable}}" selector="true"/>
+                                <i class="WeStar_iconfont right-arrow">&#xe624;</i>
+                                {{else}}
+                                    {{#compare type.input "===" "checkbox"}}
+                                    <label class="label-switch"> 
+                                        <input type="checkbox" class="weui-input" id="{{field_code}}" {{#compare value '===' 1}} checked {{/compare}}/>
+                                        <div class="checkbox"></div>
+                                    </label>
+                                    {{/compare}}
+                                {{/compare}}
+                            {{/compare}}
+                        {{/compare}}
+                    </span>
+                    <div class="wx-name">
+                    	{{title}}
+                        {{#if nullable}}
+                        {{else}}
+                    	   <span class="font-red">*</span>
+                        {{/if}}
+                    </div>
+                </li>
+                {{#compare type.input "===" "textarea"}}
+                <li class="wx-content form-group form-group-myinfo weui_cell_bd weui_cell_primary">
+                    <textarea id="{{field_code}}" rows="3" class="weui-input form_edit_textarea" index="{{@index}}" nullable="{{nullable}}">{{value}}</textarea>
+                </li>
+                {{/compare}}
+                {{/each}}
+            </ul>
+        </div>
+        <div style="display: -webkit-box;">
+            <a href="javascript:void(0);" class="weui_btn weui_btn_warn quitSystem btn-quit-color" id="commitButton" style="margin: 20px; color: white;-webkit-box-flex: 1;">{{i18n-text 'saveP'}}</a>
+            {{#if delete}}
+            <a href="javascript:void(0);" class="weui_btn weui_btn_warn quitSystem btn-quit-color" id="deleteButton" style="margin: 20px; color: white;-webkit-box-flex: 1;">{{i18n-text 'delete'}}</a>
+            {{/if}}
+        <div>
+    </div>
+</div>

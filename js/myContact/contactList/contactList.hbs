@@ -1,0 +1,71 @@
+<div class="page toolbar-fixed">
+    <div class="toolbar tabbar tabbar-labels">
+        <div class="toolbar-inner">
+            <a href="#" class="tab-link" toPage="myProfile">
+                <i class="WeStar_iconfont bigger-icon">&#xe607</i>
+                <span class="tabbar-label">{{i18n-text 'home'}}</span>
+            </a>
+            {{!-- <a href="#" class="tab-link" toPage="myMessage">
+                <i class="WeStar_iconfont bigger-icon">&#xe609</i>
+                <span class="tabbar-label">{{i18n-text 'news'}}</span>
+            </a> --}}
+            <a href="#" class="tab-link active" toPage="myContact">
+                <i class="WeStar_iconfont bigger-icon">&#xe617</i>
+                <span class="tabbar-label">{{i18n-text 'contact'}}</span>
+            </a>
+            <a href="#" class="tab-link" toPage="mySelf">
+                <i class="WeStar_iconfont bigger-icon">&#xe61b</i>
+                <span class="tabbar-label">{{i18n-text 'myself'}}</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="page-content page-background">
+        <div class="search-container">
+            <div class="search-bar-panel">
+                <i class="WeStar_iconfont">&#xe630</i>
+                <form method="post" id="form" action="#">
+                    <input class="input-box" type="search" placeholder="{{i18n-text 'search-tip'}}"/>
+                </form>
+            </div>
+            <span class="cancel_btn">
+                {{i18n-text 'cancelP'}}
+            </span>
+        </div>
+        <div class="search-histroy-panel">
+            <div class="wx-group">
+                <ul class="wx-contacts"></ul>
+            </div>
+        </div>
+        <div class="myFavor-list-panel">
+            {{#if noFavor}}
+            <div class="nofavor-tip">{{i18n-text 'noFavorContact'}}</div>
+            {{else}}
+            <div class="wx-group">
+                <ul class="wx-contacts seeDetail">
+                    <li class="wx-title group-title common-layout-center">{{i18n-text 'favorContact'}}</li>
+                    {{#each favorList}}
+                    <li class="wx-item" data-id="{{id}}">
+                        <span class="wx-icon cut-img">
+                            <img onload="AutoResizeImage(36,this)" src="{{photo}}" onerror="javascript:this.src='./img/default.jpg';"/>
+                        </span>
+                        <div class="wx-name">{{name}}</div>
+                        <div class="wx-pos">
+                            <span>{{organization}}</span>
+                            {{#if position}}
+                            <span class="position-detail">{{position}}</span>
+                            {{/if}}
+                        </div>
+                    </li>
+                    {{/each}}
+                </ul>
+            </div>
+            {{/if}}
+        </div>
+        <div class="search-result-panel">
+            <div class="wx-group">
+                <ul class="wx-contacts seeDetail"></ul>
+            </div>
+        </div>
+    </div>
+</div>

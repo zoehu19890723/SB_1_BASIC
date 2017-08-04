@@ -1,0 +1,54 @@
+<div class="page-content page-background">
+    <div class="mobileframe">
+        <div class="wx-group">
+            <ul class="wx-settings">
+                <li class="wx-item ">
+                    <span class="wx-content">
+                        <input type="text" placeholder={{i18n-text 'choose-leave-type'}} id="vacationType"  class="weui-input" value="" sourceValue=""/>
+                            <i class="WeStar_iconfont right-arrow">&#xe624;</i>
+                    </span>
+                    <div class="wx-name">{{i18n-text 'leave-type'}}<span class="font-red spark">*</span></div>
+                </li>
+            </ul>
+        </div>
+        <div class="wx-group">
+            <ul class="wx-settings">
+                <li class="wx-item "><span class="wx-content">
+                </span>
+                    <div class="wx-name">{{i18n-text 'leave-reason'}}</div>
+                </li>
+            </ul>
+            <ul class="wx-settings">
+                <li class="wx-content form-group form-group-myinfo weui_cell_bd weui_cell_primary">
+                    <textarea rows="5" id="feedback" class="weui_input"  style="min-height: 100px;"> </textarea>
+                </li>
+            </ul>
+            <ul class="wx-settings">
+                <li class="wx-item  photo-padding">
+                    <span class="wx-content upload edit-attatchment" id="uploadP">
+                        {{#if photo}} <img src='{{photo}}' style='height:48px;width: 48px;'>
+                        {{else}}  <i class="WeStar_iconfont right-arrow font-color-with-imp noDataItem">&#xe614;</i> {{/if}}
+                    </span>
+                    <div class="wx-name">{{i18n-text 'attachment-picture'}}</div>
+                </li>
+            </ul>
+            <ul class="wx-settings">
+                <li class="wx-item ">
+                    <span class="wx-content">
+                        <input type="text" readonly id="startDate" class="weui-input" value="" sourceValue=""/>
+                            <i class="WeStar_iconfont right-arrow">&#xe624;</i>
+                        </span>
+                    <div class="wx-name">{{i18n-text 'startTime'}}<span class="font-red spark">*</span></div>
+                </li>
+                <li class="wx-item "><span class="wx-content">
+                        <input type="text" readonly id="endDate" class="weui-input" value="" sourceValue=""/>
+                            <i class="WeStar_iconfont right-arrow">&#xe624;</i>
+                </span>
+                    <div class="wx-name">{{i18n-text 'endTime'}}<span class="font-red spark">*</span></div>
+                </li>
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="weui_btn weui_btn_warn quitSystem btn-quit-color" id="commitButton" style="margin: 20px; color: white">{{i18n-text 'commitButton'}}</a>
+    </div>
+
+</div>

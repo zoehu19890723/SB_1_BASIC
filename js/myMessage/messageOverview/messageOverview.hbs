@@ -1,0 +1,87 @@
+<div data-page="list" class="page toolbar-fixed">
+    <div class="toolbar tabbar tabbar-labels">
+        <div class="toolbar-inner">
+            <a href="#" class="tab-link" toPage="myProfile">
+                <i class="WeStar_iconfont bigger-icon">&#xe607</i>
+                <span class="tabbar-label">{{i18n-text 'home'}}</span>
+            </a>
+            <a href="#" class="tab-link active" toPage="myMessage">
+                <i class="WeStar_iconfont bigger-icon">&#xe609</i>
+                <span class="tabbar-label">{{i18n-text 'news'}}</span>
+            </a>
+            <a href="#" class="tab-link" toPage="myContact">
+                <i class="WeStar_iconfont bigger-icon">&#xe617</i>
+                <span class="tabbar-label">{{i18n-text 'contact'}}</span>
+            </a>
+            <a href="#" class="tab-link" toPage="mySelf">
+                <i class="WeStar_iconfont bigger-icon">&#xe61b</i>
+                <span class="tabbar-label">{{i18n-text 'myself'}}</span>
+            </a>
+        </div>
+    </div>
+    <div class="page-content page-background">
+        <div class="wx-group media-list contacts-list list-block list-block-search searchbar-found">
+            <div class="list-group">
+                <ul class="wx-contacts">
+
+                    <li class="wx-item" data-id="{{id}}" data-name="{{name}}" data-color="{{color}}" data-email="{{email}}" data-gender="{{gender}}" data-mobile="{{mobile}}" data-photo="{{photo}}" data-pinyin="{{pinyin}}" data-post="{{position}}" data-supervisor="{{supervisor}}" data-favorite="{{favorite}}" data-photoText="{{photoText}}" data-organization="{{organization}}" toPage="companyNews" >
+                             <span class="wx-icon" id="ico_{{id}}">
+                                 <span class="wx-photo bg-blue">
+                               <i class="fault-photo WeSpark_iconfont">&#xe63e;</i>
+                                </span>
+                             </span>
+                        <div class="wx-name">公司动态<span>1222</span>
+                        </div>
+
+                        <div class="wx-pos">1234<span></span>
+
+                    </div>
+                    </li>
+
+                    <li class="wx-item" data-id="{{id}}" data-name="{{name}}" data-color="{{color}}" data-email="{{email}}" data-gender="{{gender}}" data-mobile="{{mobile}}" data-photo="{{photo}}" data-pinyin="{{pinyin}}" data-post="{{position}}" data-supervisor="{{supervisor}}" data-favorite="{{favorite}}" data-photoText="{{photoText}}" data-organization="{{organization}}" toPage="approveDetail" >
+                             <span class="wx-icon" id="ico_{{id}}">
+                                     <span class="wx-photo bg-pink">
+                               <i class="fault-photo WeSpark_iconfont">&#xe63d;</i>
+                                         <i class="pushFlagNum-m"><span class="font-s">2</span></i>
+                                </span>
+                                    <span >
+
+                                </span>
+
+                             </span>
+                        <div class="wx-name">审批动态<span>{{#if search}}{{mobile}}</span>{{/if}}
+                        </div>
+                        {{#if position}}
+                        <div class="wx-pos">{{position}}<span>{{#if search}}{{mobile}}</span>{{/if}}
+                        {{else}}
+                        <div class="wx-pos">{{mobile}}
+                        {{/if}}
+                    </div>
+                    </li>
+
+                    <li class="wx-item" data-id="{{id}}" data-name="{{name}}" data-color="{{color}}" data-email="{{email}}" data-gender="{{gender}}" data-mobile="{{mobile}}" data-photo="{{photo}}" data-pinyin="{{pinyin}}" data-post="{{position}}" data-supervisor="{{supervisor}}" data-favorite="{{favorite}}" data-photoText="{{photoText}}" data-organization="{{organization}}" toPage="unusualAttendance" >
+                                         <span class="wx-icon" id="ico_{{id}}">
+                                             <span class="wx-photo bg-yellow">
+                                                 <i class="fault-photo WeSpark_iconfont">&#xe63b;</i>
+                                                 <i class="right-top WeSpark_iconfont">&#xe63c;</i>
+                                            </span>
+                                         </span>
+                        <div class="wx-name">考勤异常<span></span>
+                        </div>
+
+                        <div class="wx-pos"><span></span>
+
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+        <div class="content-block searchbar-not-found">
+            Nothing found
+        </div>
+    </div>
+</div>
+</div>

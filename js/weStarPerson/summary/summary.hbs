@@ -1,0 +1,20 @@
+<div class="page-content page-background">
+    {{> userInfoCard}}
+    <div class="wx-group">
+        <ul class="wx-settings">
+          {{#each detailArray}}
+            <li class="wx-item we-star-person" topage= {{this.[0]}}>
+                <span class="wx-content">  
+                    <i class="WeStar_iconfont ">&#xe624;</i>
+                </span>
+                <div class="wx-name">{{this.[1].title}}</div>
+             </li>
+         	{{/each}}
+        </ul>
+    </div>
+    <div class="weui_cells_title"></div>
+</div>
+
+
+
+

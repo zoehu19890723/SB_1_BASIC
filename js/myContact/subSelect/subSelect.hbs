@@ -1,0 +1,18 @@
+<div class="page-content page-background">
+	{{#if isNull}}
+        {{> nullCard}}
+    {{else}}
+    	<div class="wx-group">
+            <ul class="wx-contacts seeDetail">
+                {{#each members}}
+                <li class="wx-item my-sub-item common-layout-center" data-id="{{id}}">
+                    <span class="wx-icon cut-img">
+                        <img onload="AutoResizeImage(36,this)" src="{{photo}}" onerror="javascript:this.src='./img/default.jpg';"/>
+                    </span>
+                    <div class="wx-name">{{fullname}}</div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    {{/if}}
+</div>

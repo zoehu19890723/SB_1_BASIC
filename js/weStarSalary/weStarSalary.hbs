@@ -1,0 +1,47 @@
+<div class="page-content page-background">
+    {{#if isNull}}
+        {{> nullCard}}
+    {{else}}
+        <div class="card">
+            <div class="wx-group">
+                <ul class="wx-settings" style="padding:12px">
+                    <li class="wx-item">
+                        <div style = "display: flex;font-size: 17px;line-height: 32px;">
+                            <span style="color: black;flex: 1;">{{i18n-text 'status'}}</span>
+                            <span>{{i18n-text 'pay-paid'}}</span>
+                        </div>
+                        <div>
+                            <span>{{i18n-text 'pay-time'}}</span>
+                            <span>{{data.date}}</span>
+                        </div>
+                        
+                    </li>
+                </ul>
+            </div>
+        </div>
+        {{#if data.monthData}}
+            {{#each data.monthData}}
+                <div class="list-block" style="margin: 5px 0;">
+                    <div class="wx-group">
+                        <div class="wx-title group-split-block border-color">{{groupTitle}}</div>
+                        <ul class="wx-settings">
+                         {{#each groupData}}
+                            <li>
+                                <div class="item-content">
+                                    <div class="item-inner">
+                                        <div class="item-title"><span>{{title}}</span></div>
+                                        <span class="ess-item-value">{{value}}</span>
+                                    </div>
+                                </div>
+                            </li>
+                         {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            {{/each}}
+            <div class="weui_cells_title"></div>
+        {{else}}
+            {{> nullCard}}
+        {{/if}}
+    {{/if}}
+</div>

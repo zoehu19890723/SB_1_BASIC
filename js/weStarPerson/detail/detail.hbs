@@ -1,0 +1,55 @@
+<div class="page-content page-background">
+    {{> userInfoCard}}
+
+    {{#if isNull}}
+        {{> nullCard}}
+    {{else}}
+        <div class="list-block" style="margin: 5px 0;">
+            <div class="wx-group">
+                <ul class="wx-settings">
+                 {{#each data}}
+                    <li>
+                        {{#if editAble}}
+                        <div class="item-content edit-item item-link" code="{{field_code}}" name="{{title}}" default-value="{{value}}" nullable="{{nullable}}" input-type="{{type.inputType}}" ui-type="{{type.input}}">
+                        {{else}}
+                        <div class="item-content">
+                        {{/if}}
+                        <div class="item-inner">
+                            <div class="item-title">
+                                <span>{{title}}</span>
+                            </div>
+                            {{#if editAble}}
+                                {{#compare type.input '===' 'checkbox'}}
+                                <div class="item-after">
+                                    <label class="label-switch"> 
+                                        <input type="checkbox" {{#compare value '===' 1}} checked="on" {{/compare}}/>
+                                        <div class="checkbox"></div>
+                                    </label>
+                                </div>
+                                {{else}}
+                                    {{#compare type.input '===' 'selector'}}
+                                    <div class="item-after">
+                                        <input type="text" id="{{field_code}}" class="weui-input edit-selector-input" value="" sourceValue="" readonly index="{{@index}}" data-type="selector" data-value="{{value}}"/>
+                                    </div>
+                                    {{else}}
+                                        {{#compare type.input '===' 'dateTimeSeletor'}}
+                                        <div class="item-after">
+                                            <input type="text" id="{{field_code}}" class="weui-input edit-selector-input" value="" sourceValue="" readonly index="{{@index}}" data-type="dateTimeSelector" data-value="{{value}}"/>
+                                        </div>
+                                        {{else}}
+                                        <span class="ess-item-value">{{value}}</span>   
+                                        {{/compare}}
+                                    {{/compare}}
+                                {{/compare}}
+                            {{else}}
+                            <span class="ess-item-value">{{value}}</span>
+                            {{/if}}
+                            </div>
+                        </div>
+                    </li>
+                 {{/each}}
+                </ul>
+            </div>
+        </div>
+    {{/if}}
+</div>

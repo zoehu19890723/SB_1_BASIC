@@ -1,0 +1,45 @@
+<div class="page-content page-background" style="padding-bottom:44px">
+    {{> userInfoCard}}
+
+    {{#if isNull}}
+        {{> nullCard}}
+    {{else}}
+        {{#each data}}
+            <div class="list-block" style="margin: 12px 4px;">
+                <div class="wx-group">
+                    {{#if groupTitle}}
+                        <div class="wx-title group-split-block border-color">{{groupTitle}}</div>
+                    {{/if}}
+                    <ul class="wx-settings editable-group">
+                    {{#each groupData}}
+                        <li>
+                            <div class="item-content">
+                                <div class="item-inner">
+                                    <div class="item-title"><span>{{title}}</span></div>
+                                    <span class="ess-item-value">{{value}}</span>
+                                </div>
+                            </div>
+                        </li>
+                     {{/each}}
+                     {{#compare permission_code '===' 3}}
+                        <li>
+                            <div class="item-inner font-color-with-imp edit-container" style="padding-right:0px" index={{@index}} data_id="{{groupId}}" delete_able="true">
+                                <i class="WeStar_iconfont edit-group">&#xe624;</i>
+                            </div>
+                        </li>
+                        {{/compare}}
+                    </ul>
+                </div>
+            </div>
+        {{/each}}
+    {{/if}}
+</div>
+
+<div class="toolbar">
+    <div class="toolbar-inner font-color-with-imp addBtn" style="justify-content:center;">
+        <span class="tabbar-label">
+            <i class="WeStar_iconfont">&#xe619;</i>
+            {{i18n-text 'add'}}
+        </span>
+    </div>
+</div>

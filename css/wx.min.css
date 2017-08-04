@@ -1,0 +1,1715 @@
+/*! wx by Xiong Liding
+ *  version: v0.3.0
+ *  http://git.oschina.net/xiongliding/wx
+ *  MIT License
+ */
+.wx-item, .wx-yang *, article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block
+}
+
+.newsList, .weui-input {
+    box-shadow: none
+}
+
+.wx-contacts, .wx-messages, .wx-news, .wx-person, .wx-services, .wx-stats, ul {
+    list-style: none
+}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-family: 'Heiti SC', DroidSansFallback, '微软雅黑', serif;
+    vertical-align: baseline
+}
+
+.service-desc, .wx-services .wx-item .wx-subtitle, ol {
+    margin-left: 20px
+}
+
+html {
+    line-height: 1
+}
+
+ol {
+    list-style-type: disc
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+caption, td, th {
+    text-align: left;
+    font-weight: 400;
+    vertical-align: middle
+}
+
+blockquote, q {
+    quotes: none
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+    content: "";
+    content: none
+}
+
+a img {
+    border: none
+}
+
+.wx-item input:focus, .wx-item textarea:focus {
+    background-color: transparent;
+    border: none
+}
+
+body {
+    background: #ebebeb
+}
+
+.wx-bigicon, .wx-icon {
+    text-align: center;
+    display: block;
+    background-size: cover;
+    background-position: center
+}
+
+.wx-icon-apple {
+    background: #4fab3d;
+    color: #fff
+}
+
+.wx-icon-apple.wx-yang {
+    color: #4fab3d
+}
+
+.wx-icon-bostonblue {
+    background: #3b91b4;
+    color: #fff
+}
+
+.wx-icon-bostonblue.wx-yang {
+    color: #3b91b4
+}
+
+.wx-icon-sanmarino {
+    background: #456cac;
+    color: #fff
+}
+
+.wx-icon-sanmarino.wx-yang {
+    color: #456cac
+}
+
+.wx-icon-blueviolet {
+    background: #6456b7;
+    color: #fff
+}
+
+.wx-icon-blueviolet.wx-yang {
+    color: #6456b7
+}
+
+.wx-icon-deeplilac {
+    background: #95b;
+    color: #fff
+}
+
+.wx-icon-deeplilac.wx-yang {
+    color: #95b
+}
+
+.wx-icon-mulberry {
+    background: #c54b8c;
+    color: #fff
+}
+
+.wx-icon-mulberry.wx-yang {
+    color: #c54b8c
+}
+
+.wx-icon-darkcoral {
+    background: #cd5b45;
+    color: #fff
+}
+
+.wx-icon-darkcoral.wx-yang {
+    color: #cd5b45
+}
+
+.wx-icon-rawsienna {
+    background: #d27d46;
+    color: #fff
+}
+
+.wx-icon-tussock, .wx-services .wx-item .service-status2, .wx-services .wx-item .service-status5 {
+    background: #c5884b
+}
+
+.wx-icon-rawsienna.wx-yang {
+    color: #d27d46
+}
+
+.wx-icon-tussock {
+    color: #fff
+}
+
+.wx-icon-tussock.wx-yang {
+    color: #c5884b
+}
+
+.wx-icon-turmeric {
+    background: #cabb48;
+    color: #fff
+}
+
+.wx-icon-turmeric.wx-yang {
+    color: #cabb48
+}
+
+.wx-icon-wattle {
+    background: #dcd747;
+    color: #fff
+}
+
+.wx-icon-wattle.wx-yang {
+    color: #dcd747
+}
+
+.wx-icon-androidgreen {
+    background: #a4c639;
+    color: #fff
+}
+
+.wx-icon-androidgreen.wx-yang {
+    color: #a4c639
+}
+
+.wx-yang {
+    background: 0 0
+}
+
+.wx-item {
+    text-decoration: none
+}
+
+.wx-messages > .wx-item {
+    background: #fff;
+    padding: 8px 12px
+}
+
+.wx-messages > .wx-item:not(:first-child) {
+    border-top: 1px solid #e5e5e5
+}
+
+.hairlines .wx-messages > .wx-item:not(:first-child) {
+    border-top: .5px solid #e5e5e5
+}
+
+.wx-messages > .wx-item .wx-icon {
+    width: 48px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 32px;
+    margin-right: 10px;
+    float: left
+}
+
+.wx-messages > .wx-item .wx-icon.wx-yang {
+    font-size: 48px
+}
+
+.wx-messages > .wx-item .wx-name {
+    height: 26px;
+    line-height: 26px;
+    font-size: 16px;
+    color: #353535;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 60px
+}
+
+.wx-messages > .wx-item .wx-content {
+    height: 22px;
+    line-height: 22px;
+    font-size: 14px;
+    color: #aaa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 40px
+}
+
+.wx-messages > .wx-item .wx-time {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #bbb;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: right
+}
+
+.wx-contacts > .wx-item .wx-name, .wx-functions > .wx-item .wx-name {
+    color: #353535;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+.wx-contacts > .wx-item .wx-name, .wx-functions > .wx-item .wx-pos {
+    color: #353535;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.wx-contacts {
+    background: #fff;
+    padding: 0 0px
+}
+
+.wx-contacts > .wx-item {
+    padding: 8px 12px;
+    border-top: 1px solid #e5e5e5
+}
+
+.hairlines .wx-contacts > .wx-item {
+    border-top: .5px solid #e5e5e5
+}
+
+.wx-contacts > .wx-item:first-child {
+    border-top: none
+}
+
+.wx-contacts > .wx-item .wx-icon {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 24px;
+    margin-right: 10px;
+    float: left
+}
+
+.wx-contacts > .wx-item .wx-icon.wx-yang {
+    font-size: 36px
+}
+
+.wx-contacts > .wx-item .wx-name {
+    height: 20px;
+    line-height: 20px;
+    font-size: 16px
+}
+.wx-contacts > .wx-item .wx-pos {
+    height: 16px;
+    line-height: 20px;
+    font-size: 5px
+}
+
+.wx-functions {
+    background: #fff;
+    padding: 0 12px
+}
+
+.wx-functions > .wx-item {
+    padding: 12px 0
+}
+
+.wx-functions > .wx-item:not(:first-child) {
+    border-top: 1px solid #e5e5e5
+}
+
+.hairlines .wx-functions > .wx-item:not(:first-child) {
+    border-top: .5px solid #e5e5e5
+}
+
+.wx-functions > .wx-item .wx-icon {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px;
+    margin: 0 14px;
+    float: left
+}
+
+.wx-functions > .wx-item .wx-icon.wx-yang {
+    font-size: 24px
+}
+
+.wx-functions > .wx-item .wx-name {
+    height: 24px;
+    line-height: 24px;
+    font-size: 16px
+}
+
+.wx-settings {
+    background: #fff;
+    padding: 0 12px
+}
+
+.wx-settings > .wx-item {
+    padding: 0 8px
+}
+
+.wx-settings > .item-border-top, .wx-settings > .wx-item:not(:first-child) {
+    border-top: 1px solid #e5e5e5
+}
+
+.hairlines .wx-settings > .wx-item:not(:first-child) {
+    border-top: .5px solid #e5e5e5
+}
+
+.wx-settings > .wx-item .wx-content {
+    height: 48px;
+    line-height: 48px;
+    font-size: 14px;
+    color: #aaa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: right
+}
+
+.wx-settings > .wx-item .wx-name, .wx-settings > .wx-item .wx-name-extend {
+    height: 48px;
+    line-height: 48px;
+    font-size: 16px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.wx-settings > .wx-item .wx-name {
+    color: #353535
+}
+
+.wx-settings > .wx-item .wx-name-extend {
+    color: #888
+}
+
+.wx-settings > .wx-item .wx-name-extend em {
+    color: #2771FF
+}
+
+.wx-group > .wx-title {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #888;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 3px;
+    padding: 0 12px
+}
+
+.wx-group > .wx-title > p {
+    align: center
+}
+
+.wx-group > .wx-title:empty {
+    margin-top: 0
+}
+
+.wx-news {
+    margin: 12px 16px -5px;
+    border-top: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
+    border-radius: 2px;
+    background-color: #fff
+}
+
+.hairlines .wx-news {
+    border-top: .5px solid #e5e5e5
+}
+
+.hairline .wx-news {
+    border-right: .5px solid #e5e5e5;
+    border-bottom: .5px solid #e5e5e5;
+    border-left: .5px solid #e5e5e5
+}
+
+.wx-news > .wx-item:first-child {
+    padding: 8px;
+    position: relative
+}
+
+.wx-news > .wx-item:first-child > .wx-icon {
+    width: 100%;
+    height: 135px
+}
+
+.wx-news > .wx-item:first-child > .wx-name {
+    position: absolute;
+    padding: 7px 2px;
+    bottom: 8px;
+    left: 8px;
+    right: 8px;
+    color: #fff;
+    background: rgba(0, 0, 0, .5);
+    line-height: 1.2
+}
+
+.wx-area, .wx-menu {
+    table-layout: fixed;
+    bottom: 0
+}
+
+.wx-news > .wx-item:not(:first-child) {
+    padding: 8px 8px 8px 16px;
+    border-top: 1px solid #e5e5e5
+}
+
+.hairlines .wx-news > .wx-item:not(:first-child) {
+    border-top: .5px solid #e5e5e5
+}
+
+.wx-news > .wx-item:not(:first-child) > .wx-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 33.33px;
+    float: right
+}
+
+.wx-news > .wx-item:not(:first-child) > .wx-icon.wx-yang {
+    font-size: 50px
+}
+
+.wx-news > .wx-item:not(:first-child) > .wx-name {
+    display: flex;
+    overflow: hidden;
+    height: 50px;
+    padding: 0 20px 0 0;
+    font-size: 16px;
+    line-height: 1.2;
+    -webkit-box-align: center;
+    align-items: center
+}
+
+.wx-article {
+    padding: 10px 15px 15px;
+    background-color: #fff
+}
+
+.wx-article > .wx-title {
+    margin-bottom: 12px;
+    line-height: 1.4;
+    font-weight: 400;
+    font-size: 24px
+}
+
+.wx-article > .wx-author, .wx-article > .wx-time {
+    color: #8c8c8c;
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    margin: 0 8px 28px 0;
+    text-decoration: none
+}
+
+.wx-article > .wx-content {
+    color: #3e3e3e;
+    font-size: 16px;
+    word-wrap: break-word;
+    line-height: 1.6;
+    clear: both;
+    max-width: 100% !important
+}
+
+.wx-menu {
+    position: fixed;
+    display: table;
+    left: 0;
+    width: 100%;
+    height: 49px;
+    background: #fff;
+    z-index: 800;
+    border-top: 1px solid silver
+}
+
+.hairlines .wx-menu {
+    border-top: .5px solid silver
+}
+
+.wx-menu .wx-item {
+    height: 49px;
+    line-height: 49px;
+    font-size: 16px;
+    color: #353535;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: table-cell;
+    text-align: center
+}
+
+.wx-menu .wx-item:not(:first-child) {
+    border-left: 1px solid silver
+}
+
+.hairline .wx-menu .wx-item:not(:first-child) {
+    border-left: .5px solid silver
+}
+
+.wx-form {
+    margin: 0 12px
+}
+
+.wx-form > .wx-item {
+    margin: 0 -12px;
+    font-size: 14px
+}
+
+.wx-form > .wx-item > .wx-name {
+    padding: 14px 12px 8px;
+    line-height: 14px;
+    color: #888;
+    display: block
+}
+
+.wx-form > .wx-item > .wx-content {
+    border: none;
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    min-height: 5em;
+    outline: 0;
+    resize: none;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 8px 8px 8px 12px;
+    background: #fff;
+    color: #353535;
+    line-height: 18px;
+    overflow: hidden
+}
+
+.wx-form > .wx-item > .wx-content > .wx-icon, .wx-form > .wx-item > .wx-content > .wx-plus {
+    width: 64px;
+    height: 64px;
+    margin: 7px 12px 7px 0;
+    display: block;
+    float: left
+}
+
+.hairlines .wx-form > .wx-item > .wx-content {
+    border-top: .5px solid #e5e5e5
+}
+
+.hairline .wx-form > .wx-item > .wx-content {
+    border-bottom: .5px solid #e5e5e5
+}
+
+.wx-form > .wx-item > .wx-content:-moz-placeholder {
+    color: #a9a9a9
+}
+
+.wx-form > .wx-item > .wx-content::-moz-placeholder {
+    color: #a9a9a9
+}
+
+.wx-form > .wx-item > .wx-content:-ms-input-placeholder {
+    color: #a9a9a9
+}
+
+.wx-form > .wx-item > .wx-content::-webkit-input-placeholder {
+    color: #a9a9a9
+}
+
+.wx-form > .wx-item > .wx-content[contentEditable]:empty:before {
+    content: attr(placeholder);
+    color: #a9a9a9
+}
+
+.wx-form > .wx-item > .wx-content > .wx-plus {
+    box-sizing: border-box;
+    border: 1px solid #d8d8d8;
+    position: relative
+}
+
+.wx-form > .wx-item > .wx-content > .wx-plus:before {
+    position: absolute;
+    left: 30px;
+    top: 15px;
+    width: 2px;
+    height: 32px;
+    background: #d8d8d8;
+    content: ""
+}
+
+.wx-form > .wx-item > .wx-content > .wx-plus:after {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    width: 32px;
+    height: 2px;
+    background: #d8d8d8;
+    content: ""
+}
+
+.weui_cells_title .spark, .wx-item .spark {
+    top: 3px;
+    position: relative
+}
+
+.wx-form > .wx-button {
+    font-size: 18px;
+    display: block;
+    border: 0;
+    margin: 20px 0;
+    width: 100%;
+    min-width: 169px;
+    height: 48px;
+    border-radius: 2px;
+    outline: 0;
+    color: #353535;
+    background-color: #fff
+}
+
+.wx-form > .wx-button[disabled] {
+    color: rgba(53, 53, 53, .5)
+}
+
+.wx-form > .wx-button:active {
+    background-color: #f5f5f5
+}
+
+.wx-form > .wx-button.wx-primary {
+    color: #fff;
+    background-color: #2771FF
+}
+
+.wx-form > .wx-button.wx-primary[disabled] {
+    color: rgba(255, 255, 255, .5)
+}
+
+.wx-form > .wx-button.wx-primary:active {
+    background-color: #298409
+}
+
+.wx-form > .wx-button.wx-danger, .wx-form > .wx-button.wx-orange {
+    color: #fff;
+    background-color: #f30
+}
+
+.wx-form > .wx-button.wx-hollow-orange {
+    border: 1px solid #f30;
+    color: #f30;
+    background-color: #fff
+}
+
+.wx-form > .wx-button.wx-danger[disabled] {
+    color: rgba(255, 255, 255, .5)
+}
+
+.wx-form > .wx-button.wx-danger:active {
+    background-color: #d24242
+}
+
+.mobileframe {
+    background: #F0EFF5;
+    padding-bottom: 20px
+}
+
+.fixNav {
+    overflow: hidden
+}
+
+.wx-person > .wx-item {
+    background: #fff;
+    height: 60px;
+    padding: 10px 12px
+}
+
+.wx-person > .wx-item:not(:first-child) {
+    border-top: 1px solid #e5e5e5
+}
+
+.wx-person > .wx-item > .wx-name-extend {
+    height: 70px;
+    line-height: 70px;
+    font-size: 16px;
+    color: #353535;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 60px;
+    padding-left: 10px
+}
+
+.hairlines .wx-person > .wx-item:not(:first-child) {
+    border-top: .5px solid #e5e5e5
+}
+
+.wx-person > .wx-item .wx-icon {
+    border-radius: 50%;
+    color: #CCC;
+    font-size: 44px;
+    margin-right: 10px;
+    float: left
+}
+
+.wx-person > .wx-item .wx-icon img {
+    border-radius: 50%
+}
+
+.wx-person > .wx-item .wx-icon.wx-yang {
+    font-size: 48px
+}
+
+.wx-person > .wx-item .wx-name {
+    height: 25px;
+    line-height: 25px;
+    font-size: 18px;
+    color: #353535;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 40px;
+    font-weight: 500;
+}
+
+.wx-person > .wx-item .wx-pos {
+    font-size: 8px;
+    color: #ffffff;
+    background-color: rgb(94,199,245);
+    padding: 1px;
+    border-radius: 2px;
+}
+
+.wx-person > .wx-item .wx-block {
+    height: 5px;
+    line-height: 5px;
+    font-size: 10px;
+    color: #353535;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.wx-person > .wx-item .wx-content, .wx-person > .wx-item .wx-post {
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    color: #aaa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 40px
+}
+
+.wx-person > .wx-item .wx-name span, .wx-person > .wx-item .wx-post span {
+   /* color: #fff;
+    font-size: 10px;
+    padding: 3px 5px;
+    background-color: #5cc9f4;
+    border-radius: 3px
+    */
+}
+
+.wx-person > .wx-item .wx-name span {
+    margin-left: 5px;
+    font-size: 12px;
+    color: #5cc9f4;
+}
+
+.wx-person > .wx-item .wx-time {
+    height: 20px;
+    line-height: 20px;
+    font-size: 15px;
+    color: #bbb;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: right
+}
+
+.wx-person > .wx-item .wx-time span{
+    color:orange;
+}
+
+.wx-item .font-red, .wx-title .font-red {
+    color: red !important
+}
+
+.wx-person > .wx-item .wx-icon {
+    width: 44px;
+    height: 44px;
+    line-height: 44px
+}
+
+.wx-list .right-arrow {
+    width: 12px;
+    height: 8px !important
+}
+
+.wx-item img.right-arrow {
+    vertical-align: middle;
+    margin-left: 5px;
+    height: 16px
+}
+
+.weui_cells_title .spark {
+    color: red !important
+}
+
+.wx-item .font-blue, .wx-title .font-blue {
+    color: #07f
+}
+
+.wx-subtitle .font-pink {
+    color: #f65e8d
+}
+
+.wx-group > .wx-info {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #888;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 3px;
+    padding: 0 12px
+}
+
+.weui-input, .weui-select {
+    -webkit-appearance: none;
+    border: 0;
+    color: inherit;
+    outline: 0
+}
+
+.wx-item .wx-arrow {
+    float: right;
+    width: 20px;
+    height: 70px;
+    line-height: 70px
+}
+
+.wx-form > .wx-button {
+    background-image: none;
+    box-shadow: none;
+    padding: 0
+}
+
+.wx-content .weui-input {
+    text-align: right
+}
+
+.weui-input {
+    background-color: transparent;
+    font-size: inherit;
+    padding: 0
+}
+
+.weui-input::-webkit-inner-spin-button, .weui-input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0
+}
+
+.main-viewport .sub-viewport {
+    background: #F0EFF5
+}
+
+.wx-stats > .wx-item {
+    background: #fff;
+    padding: 8px 12px
+}
+
+.wx-item .weui-one-quarter {
+    display: inline-block;
+    width: 22%
+}
+
+.weui-select {
+    background-color: transparent;
+    height: 44px;
+    position: relative;
+    z-index: 1;
+    padding-left: 15px
+}
+
+.select-city, .select-province {
+    width: 120px;
+    text-overflow: ellipsis;
+    padding-left: 0
+}
+
+.wx-area {
+    display: table;
+    left: 0;
+    width: 100%;
+    height: 49px;
+    background: #fff;
+    z-index: 800;
+    border-top: 1px solid silver
+}
+
+.hairlines .wx-area {
+    border-top: .5px solid silver
+}
+
+.wx-area .wx-item {
+    padding: 10px 0;
+    height: 49px;
+    line-height: 49px;
+    font-size: 16px;
+    color: #353535;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: table-cell;
+    text-align: center
+}
+
+.wx-area > .wx-item h2.title, .wx-area > .wx-item p.content {
+    text-align: center;
+    height: 25px;
+    line-height: 25px
+}
+
+.wx-para {
+    font-size: 12px;
+    color: #888;
+    margin-top: 3px;
+    line-height: 18px;
+    height: 36px;
+    padding: 3px 12px
+}
+
+.wx-services .wx-item .wx-bigicon, .wx-services .wx-item .wx-icon {
+    color: #fff;
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    font-size: 32px;
+    margin-right: 10px;
+    float: left;
+    border-radius: 50%;
+    display: flex
+}
+
+.wx-services .wx-item {
+    background: #fff;
+    padding: 8px 12px
+}
+
+.wx-services .wx-item:not(:first-child) {
+    border-top: 1px solid #e5e5e5
+}
+
+.hairlines .wx-services .wx-item:not(:first-child) {
+    border-top: .5px solid #e5e5e5
+}
+
+.getSub-box .weui_cells:before, .register-box .weui_cells:before {
+    border-top: none
+}
+
+.wx-services .wx-item .wx-icon {
+    justify-content: center;
+    align-items: center
+}
+
+.wx-services .wx-item .wx-bigicon {
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center
+}
+
+.wx-services .wx-item .wx-icon.wx-yang {
+    font-size: 48px
+}
+
+.wx-services .wx-item .wx-name {
+    height: 26px;
+    line-height: 26px;
+    font-size: 16px;
+    color: #353535;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 50px
+}
+
+.wx-services .wx-item .wx-content {
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #aaa;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 40px
+}
+
+.wx-services .wx-item .wx-widen {
+    height: 50px;
+    line-height: 50px;
+    font-size: 14px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 40px
+}
+
+.wx-services .wx-item .wx-subtitle, .wx-services .wx-item .wx-title {
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #353535;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.wx-services .wx-item .wx-title {
+    margin-right: 60px
+}
+
+.wx-services .wx-item .wx-desc {
+    height: 30px;
+    line-height: 12px;
+    font-size: 12px;
+    color: #333;
+    margin-right: 40px
+}
+
+.wx-services .wx-item .wx-bigtime, .wx-services .wx-item .wx-list, .wx-services .wx-item .wx-time {
+    height: 56px;
+    font-size: 13px;
+    color: #bbb;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: right
+}
+
+.wx-services .wx-item .wx-time {
+    line-height: 56px
+}
+
+.wx-services .wx-item .wx-bigtime {
+    line-height: 77px
+}
+
+.wx-services .wx-item .ss {
+    font-size: 11px;
+    padding: 3px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.wx-services .wx-item .service-status3 {
+    background: #25C992
+}
+
+.wx-services .wx-item .service-status, .wx-services .wx-item .service-status1, .wx-services .wx-item .service-status4 {
+    background: #CCC
+}
+
+.wx-services .wx-content > p, .wx-services .wx-widen > p {
+    font-size: 12px;
+    height: 15px;
+    line-height: 15px
+}
+
+.service-desc {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 5px 0;
+    color: #888;
+    margin-right: 10px
+}
+
+ol .service-desc {
+    margin-left: 40px
+}
+
+.company-contact {
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    color: #888;
+    text-align: center
+}
+
+.header h2 {
+    font-size: 14px
+}
+
+.wx-content .weui-select {
+    direction: rtl
+}
+
+.register-box .weui_cells {
+    margin-top: 5px
+}
+
+.register-box .weui_cells_title, .wx-group > .text-center {
+    color: #333;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    padding-left: 30px;
+    margin-top: 0;
+    margin-bottom: 0
+}
+
+.register-box .weui_cells_title {
+    background-color: #F0EFF5
+}
+/*
+.wx-group > .text-center {
+    background-color: #ebebeb
+}
+
+*/
+.register-box .weui_cell:before {
+    left: 0;
+    height: 1px;
+    border-top: none;
+    background-color: #AAA
+}
+
+.register-box input.weui_input {
+    padding-left: 15px
+}
+
+.register-box input, .register-box select {
+    color: #888
+}
+
+.register-box .step-info {
+    padding: 5px 30px
+}
+
+.register-box .step-info li {
+    list-style: disc;
+    font-size: 18px;
+    margin: 15px 0;
+    color: #F30
+}
+
+.register-box .step-info li.introduce {
+    list-style: none;
+    font-size: 15px;
+    margin: 25px 0 0;
+    color: #000;
+    text-align: center
+}
+
+.register-box .step-info li.done {
+    list-style: circle;
+    color: #444
+}
+
+.register-box .step-info li.disabled {
+    list-style: circle;
+    font-size: 16px;
+    font-style: italic;
+    color: #444
+}
+
+.register-box .step-info li.done:after, .register-box .step-info li.introduce:before {
+    font-family: weui;
+    margin-left: 5px;
+    width: 20px;
+    color: green;
+    content: '\EA08';
+    font-style: normal !important
+}
+
+p.ss-agree {
+    font-size: 14px
+}
+
+p.ss-agree em {
+    color: #2771FF
+}
+
+.wx-checkbox {
+    vertical-align: middle;
+    transform: scale(1.6);
+    margin-right: 8px
+}
+
+.wx-item-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    -webkit-justify-content: space-around;
+    justify-content: space-around
+}
+
+#projectList_wrap .wx-item-flex, #user_projectList_wrap .wx-item-flex {
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 0 25px
+}
+
+#projectList_wrap .wx-item-singleflex {
+    padding: 0 25px
+}
+
+.wx-item-flex.wx-form > button {
+    min-width: 100px;
+    width: 46%
+}
+
+.cell-right-block {
+    border-radius: 0;
+    background: #f30;
+    text-align: center;
+    width: 120px;
+    float: right;
+    height: 46px;
+    line-height: 46px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    margin-right: -15px
+}
+
+.getSub-box .weui_cells {
+    margin-top: 5px
+}
+
+.getSub-box .weui_cells_title {
+    color: #333;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    padding-left: 30px;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #F0EFF5
+}
+
+.getSub-box input.weui_input {
+    padding-left: 15px
+}
+
+.getSub-box input, .register-box select {
+    color: #888
+}
+
+.getSub-box .step-info {
+    padding: 5px 30px
+}
+
+.getSub-box .step-info li {
+    list-style: none;
+    font-size: 18px;
+    margin: 15px 0;
+    color: #F30
+}
+
+.getSub-box .step-info li.advertisement {
+    list-style: none;
+    color: #888;
+    float: right;
+    margin-right: 20px;
+    font-size: 10px
+}
+
+#register-box3 .weui_cells:after {
+    border-bottom: none;
+    color: #888;
+    float: right;
+    margin-right: 20px
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 50px
+}
+
+.wx-item-flex .entry, .wx-item-singleflex .entry {
+    width: 75px;
+    text-align: center
+}
+
+#login-logo {
+    text-align: center;
+    height: 180px;
+    background: url(../img/login/logo_star.png) center no-repeat;
+    background-size: 60%
+}
+
+.login-box .weui_cell {
+    padding: 10px 0
+}
+
+.text-center {
+    text-align: center
+}
+
+#forgetpwd {
+    color: #F30
+}
+
+#btn_register,#forgetpwd, #btn_experience {
+    font-size: 14px
+}
+
+#btn_enter {
+    font-weight: 600;
+    letter-spacing: 3px
+}
+
+.bg-icon-cdp0102, .bg-icon-san, .bg-pink {
+    background-color: #F65F8D
+}
+
+.bg-icon-tijian, .bg-lightgreen {
+    background-color: #4BDA94
+}
+
+.bg-icon-consult, .bg-lightgreen {
+    background-color: #65CDCC
+}
+
+.bg-icon-cdp00, .bg-icon-welfare, .bg-red {
+    background-color: #E9584B
+}
+
+.bg-blue, .bg-icon-employee {
+    background-color: #5F97F6
+}
+
+.bg-icon-cdp0104, .bg-orange {
+    background-color: #F30
+}
+
+.bg-icon-security, .bg-icon-tongxunlu, .bg-orange2 {
+    background-color: #FF8852
+}
+
+.bg-icon-cdp0103, .bg-icon-salary, .bg-yellow {
+    background-color: #FFB934
+}
+
+.bg-icon-cdp0101, .bg-teal {
+    background-color: #5EC8F7
+}
+
+.bg-blue, .bg-orange, .bg-orange2, .bg-pink, .bg-red, .bg-teal, .bg-yellow {
+    color: #fff
+}
+
+.wx-circle i {
+    color: #fff;
+    font-size: 40px
+}
+
+.wx-item-singleflex .entry {
+    display: inline-block
+}
+
+.wx-item-singleflex .next {
+    margin: 0 40px
+}
+
+.wx-item-flex .wx-circle, .wx-item-singleflex .wx-circle {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-top: 20px;
+    margin-bottom: 3px;
+    display: flex
+}
+
+.wx-item-flex .entry > span {
+    text-align: center;
+    font-size: 12px
+}
+
+.cdpfont, .iconnew {
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: .2px;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.wx-item-flex .wx-circle {
+    line-height: 80px;
+    justify-content: center;
+    align-items: center
+}
+
+.wx-item-singleflex .wx-circle {
+    justify-content: center;
+    align-items: center
+}
+
+.wx-item-flex .wx-circle:active {
+    background-color: #f30
+}
+
+.weui_cells_checkbox .weui_check:checked + .weui_icon_checked:before {
+    color: #F30
+}
+
+.weui_cells_checkbox .weui_check:checked + .weui_icon_checked:before, .weui_cells_checkbox .weui_icon_checked:before {
+    content: '\EA08'
+}
+
+.wx-item .weui_cells {
+    margin-top: 0
+}
+
+.wx-item .weui_cells:before {
+    border: none;
+    height: 0
+}
+
+@font-face {
+    font-family: cdpfont;
+    src: url(../font/iconfont.ttf) format('truetype'), url(../font/iconfont.woff) format('woff'), url(../font/iconfont.svg) format('svg')
+}
+
+
+
+.cdpfont {
+    font-family: cdpfont !important
+}
+
+@font-face {
+    font-family: "WeSpark_iconfont";
+    src: url('../font/WeSpark_iconfont.eot?t=1459395862'); /* IE9*/
+    src: url('../font/WeSpark_iconfont.eot?t=1459395862#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/WeSpark_iconfont.woff?t=1459395862') format('woff'), /* chrome, firefox */
+    url('../font/WeSpark_iconfont.ttf?t=1459395862') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    url('../font/WeSpark_iconfont.svg?t=1459395862#WeSpark_iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.WeSpark_iconfont {
+    font-family: WeSpark_iconfont !important
+}
+
+@font-face {font-family: 'WeStar_iconfont';
+    src: url('../font/weStar_iconfont.eot'); /* IE9*/
+    src: url('../font/weStar_iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/weStar_iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../font/weStar_iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../font/weStar_iconfont.svg#WeStar_iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.WeStar_iconfont{
+    font-family:"WeStar_iconfont" !important;
+}
+
+
+[class^=cdp-icon-]:before {
+    font-family: cdpfont !important
+}
+
+.cdp-icon-san:before {
+    content: "\e613"
+}
+
+.cdp-icon-tongxunlu:before {
+    content: "\e61f"
+}
+
+.cdp-icon-list:before {
+    content: "\e603"
+}
+
+.cdp-icon-menu:before {
+    content: "\e61a"
+}
+
+.cdp-icon-ico1:before {
+    content: "\e601";
+    font-family: cdpfont !important
+}
+
+.cdp-icon-ico2:before {
+    content: "\e600";
+    font-family: cdpfont !important
+}
+
+
+.cdp-icon-nan:before {
+    content: "\e624";
+    color: #5cc9f4;
+}
+.cdp-icon-4:before {
+    content: "\e629";
+    color: deeppink;
+}
+
+.cdp-icon-unie6b7:before {
+    content: "\e60a"
+}
+
+.cdp-icon-unie6b8:before {
+    content: "\e602"
+}
+
+.cdp-icon-employee:before {
+    content: "\e618"
+}
+
+.cdp-icon-square:before {
+    content: "\e604"
+}
+
+.cdp-icon-unie6d6:before {
+    content: "\e605"
+}
+
+.cdp-icon-salary:before {
+    content: "\e606"
+}
+
+.cdp-icon-correct:before {
+    content: "\e607"
+}
+
+.cdp-icon-abroad:before {
+    content: "\e608"
+}
+
+.cdp-icon-service:before {
+    content: "\e609"
+}
+
+.cdp-icon-search:before {
+    content: "\e60b"
+}
+
+.cdp-icon-left:before {
+    content: "\e60d"
+}
+
+.cdp-icon-down:before {
+    content: "\e60e"
+}
+
+.cdp-icon-download:before {
+    content: "\e619"
+}
+
+.cdp-icon-security:before {
+    content: "\e60f"
+}
+
+.cdp-icon-right:before {
+    content: "\e610"
+}
+
+.cdp-icon-company:before {
+    content: "\e616"
+}
+
+.cdp-icon-card:before {
+    content: "\e611"
+}
+
+.cdp-icon-calendar:before {
+    content: "\e612"
+}
+
+.cdp-icon-bill:before {
+    content: "\e614"
+}
+
+.cdp-icon-add:before {
+    content: "\e615"
+}
+
+.cdp-icon-location:before {
+    content: "\e60c"
+}
+
+.cdp-icon-touxiang:before {
+    content: "\e61b"
+}
+
+.cdp-icon-tijian:before {
+    content: "\e617"
+}
+
+.cdp-icon-consult:before {
+    content: "\e61e"
+}
+
+.cdp-icon-welfare:before {
+    content: "\e61d"
+}
+.cdp-icon-foreign:before {
+    content: "\e612"
+}
+.cdp-icon-renshi:before {
+    content: "\e60a"
+}
+.cdp-icon-sec:before {
+    content: "\e61c"
+}
+.cdp-icon-quality:before {
+    content: "\e611"
+}
+
+.cdp-icon-download {
+    font-size: 18px
+}
+
+
+#head-holder {
+    width: 120px;
+    margin: 25px auto;
+    font-size: 120px;
+    color: #ccc
+}
+
+#head-holder img {
+    border-radius: 50%
+}
+
+.picture-holder {
+    width: 200px;
+    margin: 25px auto;
+    font-size: 200px;
+    color: #ccc
+}
+
+div.step-info {
+    margin-top: 20px
+}
+
+.suit_cdp0300 .subscribe-info {
+    padding: 5px 30px;
+    margin: 20px 0;
+    text-align: center
+}
+
+.step-info h1 {
+    font-size: 16px;
+    font-weight: 600
+}
+
+.step-info p {
+    color: #888;
+    font-size: 12px
+}
+
+.final-step {
+    height: 100px;
+    text-align: center
+}

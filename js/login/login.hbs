@@ -1,0 +1,35 @@
+<div class="login-box" id="login">
+    <div id="login-logo"></div>
+    <div class="weui_cells register-box">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <input id="username" class="weui_input" type="text" placeholder="{{i18n-text 'usernameTip'}}">
+            </div>
+            <div class="weui_cell_ft"> 
+                <span title="{{i18n-text 'clear'}}" class="WeStar_iconfont" id="text-clear-u" style="display:none" >&#xe60c;&nbsp</span>
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <input id="pwd" class="weui_input" type="password" placeholder="{{i18n-text 'pwdTip'}}">
+            </div>
+            <div class="weui_cell_ft"> 
+                <span title="{{i18n-text 'clear'}}" class="WeStar_iconfont" id="text-clear-p" style="display:none" >&#xe60c;&nbsp</span>
+            </div>
+        </div>
+    </div>
+    <div class="wx-form">
+        <button id="btn_enter" class="weui_btn back-color-imp" style="margin:20px 0">{{i18n-text 'login'}}</button>
+    </div>
+        <div class="text-center">
+            <div class="forgetPwd-panel">
+                <a id="forgetpwd" toPage="PwdProblem" class="font-color-with-imp"><i class="WeStar_iconfont">&#xe615;</i>&nbsp{{i18n-text 'forgetPwd'}}</a>
+            </div>
+        </div>
+</div>
+<div id="login-toast" style="display: none;">
+    <div class="weui_mask_transparent"></div>
+    <div class="weui_toast">
+        <p class="weui_toast_content"></p>
+    </div>
+</div>

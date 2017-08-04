@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" >
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" >
+    <meta name="viewport"  content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <link rel="apple-touch-icon" href="img/icons/Icon@2x.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-iphone4.png" />
+    <link rel="icon" href="img/login/favicon32.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="img/login/favicon32.ico" type="image/x-icon" />
+    <title>WeStar</title>
+    <link rel="stylesheet" href="lib/css/framework7.ios.min.css">
+    <link rel="stylesheet" href="lib/css/framework7.ios.colors.min.css">
+    <link rel="stylesheet" href="css/weui.min.css?16440">
+    <link rel="stylesheet" href="css/wx.min.css?16440">
+    <link rel="stylesheet" href="css/ESS.css?16440">
+    <link rel="stylesheet" href="css/myCss.css?16440">
+</head>
+
+<body class="theme-custom-purple">
+<!-- Views-->
+<div class="views"  id="index_view">
+    <div class="view view-main navbar-fixed">
+
+        <div class="navbar navbar-none">
+            <div class="navbar-inner">
+                <div class="left">
+                </div>
+                <div class="center sliding contacts-list-header"></div>
+                <div class="right contact-add-link">
+                </div>
+            </div>
+        </div>
+
+        <div class="pages">
+            <div data-page="first_slider" class="page">
+                <div id="login-page-content"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="popup popup-about">
+    <div class="popup-close-btn">
+        <a href="#" class="close-popup">
+            <i class="WeStar_iconfont font-color-with-imp" style="font-size:32px">&#xe60c</i>
+        </a>
+    </div>
+    <div id='container'></div>
+</div>
+</body>
+    <script src="cordova.js"></script>
+    <script src="cordova_plugins.js"></script>
+    <!--  lib.min.js 是这些文件的合并 : ['./lib/zepto.js', './lib/framework7.js', './lib/lodash.js','./lib/when.js','./lib/store.js','./lib/charTransPY.js']-->
+    <script type="text/javascript" src="lib/lib.min.js"></script>
+    <script type="text/javascript" data-main="app" src="lib/require.js"></script>
+    <script type="text/javascript" src="js/commonUtils.js?16440"></script>
+    <script type="text/javascript" src="sys_param.js?16440"></script>
+</html>

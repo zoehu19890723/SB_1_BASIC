@@ -1,0 +1,19 @@
+<div class="page-content page-background">
+     {{> userInfoCard}}
+
+    {{#each listInfo}}
+    <div class="wx-group">
+        <ul class="wx-settings">
+          {{#each this}}
+	        <li class="wx-item item-link my-overtime-item" topage={{link}} >
+	            <span class="wx-content">  
+	                <i class="WeStar_iconfont ">&#xe624;</i>
+	            </span>
+	            <div class="wx-name">{{title}}</div>
+	         </li>
+	       {{/each}}
+        </ul>
+    </div>
+    <div class="weui_cells_title"></div>
+    {{/each}}
+</div>

@@ -1,0 +1,38 @@
+<div class="page-content page-background">
+    {{#if isNull}}
+        {{> nullCard}}
+    {{else}}
+        {{#if hasNav}}
+            <div class="org-nav">
+                {{#each parent}}
+                    <div class="nav-item back-color-with-5 {{isSelf}} font-color-with-spec" toPage={{id}}>{{fullname}}</div>
+                    <div class="nav-split font-color-with-7">></div>
+                {{/each}}
+            </div>
+        {{/if}}
+        <div class="team-container {{animation}}">
+            {{#each members}}
+                <div class="team-item-card">
+                    <div class= "self-info-card" toPage = {{id}}>
+                        <div class="self-photo cut-img">
+                            <img src="{{photo}}" onload="AutoResizeImage(60,this)" onerror="javascript:this.src='./img/default.jpg'"/>
+                        </div>
+                        <div class="self-text-info">
+                            <div class="emp-code">{{i18n-text 'emp-code'}}：<span>{{emp_code}}</span></div>
+                            <div class="emp-name">{{i18n-text 'emp-name'}} ：<span>{{fullname}}</span></div>
+                        </div>
+                    </div>
+                    {{#compare subordinate_count '>' 0}}
+                    <div class= "team-member" toPage = {{id}}>
+                        <div>{{i18n-text 'subordinate'}}</div>
+                        <div>
+                            <span class="number">{{subordinate_count}}</span>
+                            <i class="WeStar_iconfont ">&#xe624;</i>
+                        </div>
+                    </div>
+                    {{/compare}}
+                </div>
+            {{/each}}
+        </div>
+    {{/if}}
+</div>
